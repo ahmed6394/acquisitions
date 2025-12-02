@@ -1,0 +1,24 @@
+{
+  "name": "acquisitions",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmed6394/acquisitions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmed6394/acquisitions/issues"
+  },
+  "homepage": "https://github.com/ahmed6394/acquisitions#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
