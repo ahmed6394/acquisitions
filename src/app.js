@@ -6,5 +6,4 @@ app.get('/', (req, res) => {
   res.send('Hello, from acquisitions service!');
 });
 
-
 export default app;
