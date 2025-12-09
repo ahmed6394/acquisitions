@@ -1,4 +1,7 @@
-import jwt, { sign, verify } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
+import logger from '#config/logger.js';
+
+const {sign, verify} = jwt;
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-please-change-in-production';
 const JWT_EXPIRES_IN = '1d'; // Token expiration time

@@ -1,5 +1,3 @@
-import { clear } from "winston";
-
 export const cookies = {
     getOptions: () => ({
         httpOnly: true,
