@@ -26,20 +26,38 @@ mkdir -p .neon_local
 # Add .neon_local to .gitignore if not already present
 if ! grep -q ".neon_local/" .gitignore 2>/dev/null; then
     echo ".neon_local/" >> .gitignore
-    echo "✅ Added .neon_local/ to .gitignore"
 fi
 
-echo "📦 Building and starting development containers..."
-echo "   - Neon Local proxy will create an ephemeral database branch"
-echo "   - Migrations will run automatically when database is ready"
-echo "   - Application will run with hot reload enabled"
-echo ""
+# Stop and remove acquisitions-neon-local container if exists
+if docker ps -a --format '{{.Names}}' | grep -q "^acquisitions-neon-local$"; then
+    echo "   Removing acquisitions-neon-local container..."
+    docker stop acquisitions-neon-local 2>/dev/null
+    docker rm acquisitions-neon-local 2>/dev/null
+fi
 
-# Start development environment
-docker compose -f docker-compose.dev.yml up --build
+# Stop and remove acquisitions-app-dev container if exists
+if docker ps -a --format '{{.Names}}' | grep -q "^acquisitions-app-dev$"; then
+    echo "   Removing acquisitions-app-dev container..."
+    docker stop acquisitions-app-dev 2>/dev/null
+    docker rm acquisitions-app-dev 2>/dev/null
+fi
 
-echo ""
-echo "🎉 Development environment stopped!"
-echo ""
-echo "To restart, run: ./dev.sh"
-echo "To clean up, run: docker compose -f docker-compose.dev.yml down"
+# Clean up any existing compose containers (with orphans)
+docker compose -f docker-compose.dev.yml down --remove-orphans 2>/dev/null
+
+# Check if acquisitions-neon-local image exists
+if docker images -q acquisitions-neon-local 2>/dev/null | grep -q .; then
+    echo "✅ acquisitions-neon-local image found."
+    
+    # Check if acquisitions-app-dev image exists
+    if docker images --format '{{.Repository}}' | grep -q "acquisitions-app-dev"; then
+        echo "✅ acquisitions-app-dev image found. Starting containers..."
+        docker compose -f docker-compose.dev.yml up -d
+    else
+        echo "📦 acquisitions-app-dev image not found. Building app and starting..."
+        docker compose -f docker-compose.dev.yml up --build -d
+    fi
+else
+    echo "📦 acquisitions-neon-local image not found. Building all images..."
+    docker compose -f docker-compose.dev.yml up --build -d
+fi
