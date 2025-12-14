@@ -130,3 +130,35 @@
 {"level":"info","message":"::1 - - [12/Dec/2025:14:45:13 +0000] \"GET /health HTTP/1.1\" 429 79 \"-\" \"HTTPie\"","service":"acquisitions-api"}
 {"IP":"::1","level":"warn","message":"Rate limit request blocked","path":"/health","service":"acquisitions-api","userAgent":"HTTPie"}
 {"level":"info","message":"::1 - - [12/Dec/2025:14:45:14 +0000] \"GET /health HTTP/1.1\" 429 79 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:37:28 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:37:59 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:38:29 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:39:00 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:39:31 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:40:01 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:40:32 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:41:03 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:41:33 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:42:04 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:42:34 +0000] \"GET / HTTP/1.1\" 200 33 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [13/Dec/2025:12:42:35 +0000] \"GET /health HTTP/1.1\" 200 77 \"-\" \"node\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:42:37 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:48:29 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:54:40 +0000] \"GET /api HTTP/1.1\" 200 28 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:54:49 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:54:54 +0000] \"GET /healthcheck HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:55:59 +0000] \"GET /health HTTP/1.1\" 200 76 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:56:17 +0000] \"GET /api/sign-up HTTP/1.1\" 404 150 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Attempting to create user with email: ahmed42@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"User ahmed42@gmail.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully (ahmed42@gmail.com) with role user","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:12:57:53 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 115 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:13:12:43 +0000] \"GET / HTTP/1.1\" 200 33 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Attempting to create user with email: ahmedt@gmail.com","service":"acquisitions-api"}
+{"level":"info","message":"User ahmedt@gmail.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully (ahmedt@gmail.com) with role user","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:172.18.0.1 - - [13/Dec/2025:13:13:02 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 115 \"-\" \"HTTPie\"","service":"acquisitions-api"}
