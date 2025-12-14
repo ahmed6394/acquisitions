@@ -42,6 +42,7 @@ services:
     depends_on:
       neon-local:
         condition: service_healthy
+    command: sh -c "npm run db:migrate && npm run dev"
     networks:
       - acquisitions-dev
     restart: unless-stopped

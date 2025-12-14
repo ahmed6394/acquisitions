@@ -42,7 +42,7 @@ export const authenticateUser = async ({ email, password }) => {
             name: existingUser.name,
             email: existingUser.email,
             role: existingUser.role,
-            createdAt: existingUser.created_at
+            created_at: existingUser.created_at
         };
     } catch (e) {
         logger.error(`Authentication error for ${email}:`, e.message);
@@ -77,7 +77,7 @@ export const createUser = async ({ name, email, password, role = 'user' }) => {
         const result = await sql`
             INSERT INTO users (name, email, password, role)
             VALUES (${name}, ${email}, ${password_hash}, ${role})
-            RETURNING id, name, email, role, created_at as "createdAt"
+            RETURNING id, name, email, role, created_at as "created_at"
         `;
 
         const newUser = result[0];

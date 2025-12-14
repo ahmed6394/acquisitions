@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import authRoutes from '#routes/auth.routes.js';
+import usersRoutes from '#routes/users.routes.js';
 import { time } from 'drizzle-orm/mysql-core';
 import { timestamp } from 'drizzle-orm/gel-core';
 import securityMiddleware from '#middleware/security.middleware.js';
@@ -36,5 +37,6 @@ app.get('/api', (req, res) => {
 
 // Import and use auth routes
 app.use('/api/auth', authRoutes);
+app.use('/api/users', usersRoutes); // Example for user routes
 
 export default app;
