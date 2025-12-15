@@ -23,7 +23,7 @@ const aj = arcjet({
       mode: 'LIVE', // Enforce rate limits. Use "DRY_RUN" to log only
       // Allow 100 requests per 60 seconds per IP
       interval: '2s',
-      max: 5
+      max: 5,
     }),
   ],
 });

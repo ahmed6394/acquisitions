@@ -2,7 +2,7 @@ import logger from '#config/logger.js';
 import bcrypt from 'bcrypt';
 import { sql } from '#config/database.js';
 
-export const hashPassword = async (password) => {
+export const hashPassword = async password => {
   try {
     return await bcrypt.hash(password, 10);
   } catch (error) {
@@ -31,17 +31,20 @@ export const authenticateUser = async ({ email, password }) => {
     if (!existingUser) {
       throw new Error('User not found');
     }
-    const isPasswordValid = await comparePassword(password, existingUser.password);
+    const isPasswordValid = await comparePassword(
+      password,
+      existingUser.password
+    );
     if (!isPasswordValid) {
       throw new Error('Invalid email or password');
     }
     logger.info(`User ${email} authenticated successfully`);
-    return { 
-      id: existingUser.id, 
+    return {
+      id: existingUser.id,
       name: existingUser.name,
       email: existingUser.email,
       role: existingUser.role,
-      created_at: existingUser.created_at
+      created_at: existingUser.created_at,
     };
   } catch (e) {
     logger.error(`Authentication error for ${email}:`, e.message);
@@ -52,7 +55,7 @@ export const authenticateUser = async ({ email, password }) => {
 export const createUser = async ({ name, email, password, role = 'user' }) => {
   try {
     logger.info(`Attempting to create user with email: ${email}`);
-        
+
     // Check if user exists using raw SQL
     try {
       const existingUsers = await sql`

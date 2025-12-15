@@ -22,7 +22,10 @@ describe('API Endpoints', () => {
         .set('User-Agent', 'Jest Test Runner')
         .expect(200);
 
-      expect(response.body).toHaveProperty('message', 'Acquisitions API is working');
+      expect(response.body).toHaveProperty(
+        'message',
+        'Acquisitions API is working'
+      );
     });
   });
 
@@ -34,7 +37,10 @@ describe('API Endpoints', () => {
         .expect(404);
 
       expect(response.body).toHaveProperty('error', 'Not Found');
-      expect(response.body).toHaveProperty('message', 'The requested resource was not found');
+      expect(response.body).toHaveProperty(
+        'message',
+        'The requested resource was not found'
+      );
     });
   });
 });

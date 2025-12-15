@@ -23,6 +23,7 @@ The development environment runs the application alongside a local Postgres cont
 4.  The database is accessible at `postgres://user:password@localhost:5432/dbname`.
 
 ### Notes
+
 - The app connects to the database via the internal hostname `neon-local`.
 - Hot-reloading is enabled for the application code.
 
@@ -41,6 +42,7 @@ The production environment builds an optimized image and expects an external Neo
     ```
 
     Or using a `.env` file (ensure it's not committed):
+
     ```bash
     docker-compose -f docker-compose.prod.yml --env-file .env.production up --build
     ```

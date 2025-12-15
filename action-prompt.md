@@ -5,6 +5,7 @@ You are a backend developer working on a project where CI/CD pipelines need to b
 ## Workflow 1: lint-and-format.yml
 
 **Requirements:**
+
 - Implement a workflow triggered on pushes and pull requests to the `main` and `staging` branches.
 - Use Node.js `20.x` with caching enabled.
 - Install dependencies with `npm ci`.
@@ -14,6 +15,7 @@ You are a backend developer working on a project where CI/CD pipelines need to b
 ## Workflow 2: tests.yml
 
 **Requirements:**
+
 - Implement a workflow triggered on pushes and pull requests to the `main` and `staging` branches.
 - Use Node.js `20.x` with caching enabled.
 - Install dependencies with `npm ci`.
@@ -25,6 +27,7 @@ You are a backend developer working on a project where CI/CD pipelines need to b
 ## Workflow 3: docker-build-and-push.yml
 
 **Requirements:**
+
 - Implement a workflow triggered on pushes to the `main` branch or manually via `workflow_dispatch`.
 - Configure Docker Buildx for multi-platform builds.
 - Log in to Docker Hub using secrets (`DOCKER_USERNAME`, `DOCKER_PASSWORD`).

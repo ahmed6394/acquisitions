@@ -41,15 +41,15 @@ docker-compose -f docker-compose.dev.yml up --build
 
 ### Accessing Services
 
--   **Application**: [http://localhost:3000](http://localhost:3000)
-    -   The app runs in `development` mode with hot-reloading enabled (via `node --watch`).
--   **Database**: `postgres://neon:npg@localhost:5432/neondb`
-    -   The app connects internally via `postgres://neon:npg@neon-local:5432/neondb`.
+- **Application**: [http://localhost:3000](http://localhost:3000)
+  - The app runs in `development` mode with hot-reloading enabled (via `node --watch`).
+- **Database**: `postgres://neon:npg@localhost:5432/neondb`
+  - The app connects internally via `postgres://neon:npg@neon-local:5432/neondb`.
 
 ### How it Works
 
--   **`neon-local` service**: Runs the Neon proxy. It intercepts database connections and can manage branching logic.
--   **`app` service**: Builds from the `development` stage of the `Dockerfile`. It mounts your local source code (`.:/app`) so changes are reflected immediately without rebuilding.
+- **`neon-local` service**: Runs the Neon proxy. It intercepts database connections and can manage branching logic.
+- **`app` service**: Builds from the `development` stage of the `Dockerfile`. It mounts your local source code (`.:/app`) so changes are reflected immediately without rebuilding.
 
 ---
 
@@ -82,11 +82,11 @@ docker-compose -f docker-compose.prod.yml --env-file .env.production up --build 
 
 ### How it Works
 
--   **`app` service**: Builds from the `production` stage of the `Dockerfile`.
-    -   Installs only production dependencies (`npm ci --only=production`).
-    -   Runs as a non-root user (`nodejs`) for security.
-    -   No source code mounting; the code is baked into the image.
--   **Database**: No local database container is run. The app connects securely to the remote Neon instance.
+- **`app` service**: Builds from the `production` stage of the `Dockerfile`.
+  - Installs only production dependencies (`npm ci --only=production`).
+  - Runs as a non-root user (`nodejs`) for security.
+  - No source code mounting; the code is baked into the image.
+- **Database**: No local database container is run. The app connects securely to the remote Neon instance.
 
 ---
 
@@ -101,13 +101,16 @@ The `Dockerfile` uses a multi-stage build process:
 ## 4. Troubleshooting
 
 ### "User not found" or Auth Errors in Dev
--   Ensure `neon-local` is healthy (`docker ps`).
--   Check if `NEON_API_KEY` is valid in your `.env` file.
+
+- Ensure `neon-local` is healthy (`docker ps`).
+- Check if `NEON_API_KEY` is valid in your `.env` file.
 
 ### Database Connection Refused
--   **Dev**: Ensure the `neon-local` container is running and exposing port 5432.
--   **Prod**: Check your `DATABASE_URL` and ensure your IP is allowed in Neon's dashboard settings (if IP allowlisting is enabled).
+
+- **Dev**: Ensure the `neon-local` container is running and exposing port 5432.
+- **Prod**: Check your `DATABASE_URL` and ensure your IP is allowed in Neon's dashboard settings (if IP allowlisting is enabled).
 
 ### Hot Reload Not Working
--   Ensure you are running the **dev** stack (`docker-compose.dev.yml`).
--   Verify that the volume mount `- .:/app` is working correctly (Docker Desktop file sharing settings).
+
+- Ensure you are running the **dev** stack (`docker-compose.dev.yml`).
+- Verify that the volume mount `- .:/app` is working correctly (Docker Desktop file sharing settings).
