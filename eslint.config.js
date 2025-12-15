@@ -1,5 +1,4 @@
 import js from '@eslint/js';
-import { rules } from 'eslint-config-prettier';
 
 export default [
   js.configs.recommended,

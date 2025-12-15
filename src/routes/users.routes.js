@@ -1,8 +1,8 @@
 import { 
-    fetchAllUsers,
-    fetchUserById,
-    updateUserById,
-    deleteUserById
+  fetchAllUsers,
+  fetchUserById,
+  updateUserById,
+  deleteUserById
 } from '#controllers/user.controller.js';
 import { authenticateToken, requireRole } from '#middleware/auth.middleware.js';
 import express from 'express';

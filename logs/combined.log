@@ -335,3 +335,6 @@
 {"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:27:32 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:27:32 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:27:32 +0000] \"GET /nonexisting HTTP/1.1\" 404 70 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:18:03:38 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:18:03:39 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:18:03:41 +0000] \"GET /nonexisting HTTP/1.1\" 404 70 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}

@@ -3,11 +3,11 @@ import { neon, neonConfig } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 
 if (process.env.NODE_ENV === 'development') {
-    neonConfig.fetchEndpoint = 'http://neon-local:5432/sql';
-    neonConfig.useSecureWebSocket = false;
-    neonConfig.wsProxy = (host) => `neon-local:5432/v2`;
-    neonConfig.pipelineTLS = false;
-    neonConfig.pipelineConnect = false;
+  neonConfig.fetchEndpoint = 'http://neon-local:5432/sql';
+  neonConfig.useSecureWebSocket = false;
+  neonConfig.wsProxy = (_host) => 'neon-local:5432/v2';
+  neonConfig.pipelineTLS = false;
+  neonConfig.pipelineConnect = false;
 }
 
 const sql = neon(process.env.DATABASE_URL);

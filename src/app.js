@@ -1,6 +1,6 @@
 import express from 'express';
 import logger from '#config/logger.js';
-import helmet from "helmet";
+import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
@@ -18,7 +18,7 @@ app.use(cookieParser());
 
 app.use(morgan('combined', { stream: { write: message => logger.info(message.trim()) } }));
 
-app.use(securityMiddleware)
+app.use(securityMiddleware);
 
 app.get('/', (req, res) => {
   logger.info('Hello from Acquisitions!');

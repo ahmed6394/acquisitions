@@ -1,21 +1,21 @@
 export const cookies = {
-    getOptions: () => ({
-        httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
-        maxAge: 15 * 60 * 1000, // 15 minutes
-    }),
+  getOptions: () => ({
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict',
+    maxAge: 15 * 60 * 1000, // 15 minutes
+  }),
     
-    set: (res, name, value, options = {}) => {
-        const opts = { ...cookies.getOptions(), ...options };
-        res.cookie(name, value, opts);
-    },
+  set: (res, name, value, options = {}) => {
+    const opts = { ...cookies.getOptions(), ...options };
+    res.cookie(name, value, opts);
+  },
 
-    clear: (res, name, options = {}) => {
-        const opts = { ...cookies.getOptions(), ...options };
-        res.clearCookie(name, opts);
-    },
-    get: (req, name) => {
-            return req.cookies[name];
-    }   
+  clear: (res, name, options = {}) => {
+    const opts = { ...cookies.getOptions(), ...options };
+    res.clearCookie(name, opts);
+  },
+  get: (req, name) => {
+    return req.cookies[name];
+  }   
 };
