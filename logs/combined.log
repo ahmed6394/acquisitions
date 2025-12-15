@@ -326,3 +326,12 @@
 {"level":"info","message":"User authenticated: mahab6@gmail.com (admin)","service":"acquisitions-api"}
 {"level":"info","message":"Getting users...","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:172.24.0.1 - - [14/Dec/2025:23:03:32 +0000] \"GET /api/users HTTP/1.1\" 200 644 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:24:26 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:24:26 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:24:26 +0000] \"GET /nonexisting HTTP/1.1\" 404 70 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:26:18 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:26:19 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:26:19 +0000] \"GET /nonexisting HTTP/1.1\" 404 70 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:27:32 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:27:32 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [15/Dec/2025:15:27:32 +0000] \"GET /nonexisting HTTP/1.1\" 404 70 \"-\" \"Jest Test Runner\"","service":"acquisitions-api"}

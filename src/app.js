@@ -30,11 +30,15 @@ app.get('/health', (req, res) => {
 });
 
 app.get('/api', (req, res) => {
-  res.status(200).json({ message: 'API is working' });
+  res.status(200).json({ message: 'Acquisitions API is working' });
 });
 
 // Import and use auth routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', usersRoutes); // Example for user routes
+
+app.use((req, res) => {
+  res.status(404).json({ error: 'Not Found', message: 'The requested resource was not found' });
+});
 
 export default app;
